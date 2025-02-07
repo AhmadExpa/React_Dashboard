@@ -32,9 +32,9 @@
 }
 
 .content.expanded {
-  margin-left: 250px;
+  margin-left: 15px;
 }
 
 .content.collapsed {
-  margin-left: 70px;
+  margin-left: 25px;
 }

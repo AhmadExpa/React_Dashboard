@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaHome, FaUser, FaCog } from "react-icons/fa";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
@@ -10,19 +10,40 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       </button>
       <ul className="nav flex-column">
         <li className="nav-item">
-          <Link className="nav-link text-white" to="/">
+          <NavLink
+            className={(e) =>
+              e.isActive
+                ? "active nav-link text-primary"
+                : "nav-link text-white"
+            }
+            to="/"
+          >
             <FaHome /> {isOpen && " Home"}
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-white" to="/users/12456">
+          <NavLink
+            className={(e) =>
+              e.isActive
+                ? "active nav-link text-primary"
+                : "nav-link text-white"
+            }
+            to="/users/12456"
+          >
             <FaUser /> {isOpen && " Users"}
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-white" to="/about">
+          <NavLink
+            className={(e) =>
+              e.isActive
+                ? "active nav-link text-primary"
+                : "nav-link text-white"
+            }
+            to="/about"
+          >
             <FaCog /> {isOpen && " Settings"}
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </div>

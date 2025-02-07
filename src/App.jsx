@@ -13,7 +13,7 @@ function App() {
         toggleSidebar={() => setSidebarOpen(!isSidebarOpen)}
       />
       <div
-        className={`container content ${
+        className={`content ${
           isSidebarOpen ? "expanded" : "collapsed"
         }`}
       >
