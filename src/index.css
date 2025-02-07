@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.sidebar {
+  background-color: #343a40;
+  color: white;
+  padding: 15px;
+  height: 100vh;
+  transition: width 0.3s;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.sidebar.closed {
+  width: 70px;
+}
+
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.content {
+  flex-grow: 1;
+  transition: margin-left 0.3s;
+}
+
+.content.expanded {
+  margin-left: 250px;
+}
+
+.content.collapsed {
+  margin-left: 70px;
+}
